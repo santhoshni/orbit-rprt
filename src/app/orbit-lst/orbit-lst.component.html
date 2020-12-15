@@ -1,0 +1,26 @@
+<!-- <p>orbit-lst works!</p> -->
+
+<h3>Orbit Report</h3>
+<table>
+  <tr class="header-row">
+    <!--<th class="sortable" ng-click=sort(name)>Name</th
+
+    (click)='addMovie(newMovie.value)'>
+    <th class="sortable" *ngFor="let satellite of satellites" (click) = "sort(satellite.name)">Name</th> -->
+    <th class="sortable" (click) = "sort('name')">Name</th>
+    <th class="sortable" (click) = "sort('type')">Type</th>
+    <th>Operational</th>
+    <th>Orbit Type</th>
+    <th>Launch Date</th>
+  </tr>
+
+  <tr *ngFor ="let satellite of satellites"><td>{{satellite.name}}</td><td [class.warning]="satellite.shouldShowWarning()">{{satellite.type}}</td> <td>{{satellite.operational}}</td> <td>{{satellite.orbitType}}</td> <td>{{satellite.launchDate}}</td></tr>
+  <!-- TODO: put <tr *ngFor=""></tr> here  ${json[4].name}
+  [class.ol-style]="changeColor"
+  ol-style *ngIf="satellite.type==Space Debris"
+  *ngIf="satellite.type==="Space Debris"" style="color: red"
+  ngStyle = {'background-color : satellite.type === 'Space Debris' ? 'red' : 'black'
+  <td style="color: red" *ngIf = "satellite.type===Space Derbis">{{satellite.type}} </td>
+  -->
+</table>
+
